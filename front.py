@@ -119,9 +119,21 @@ scr.grid(row=4,column=2,rowspan=6)
 
 list1.configure(yscrollcommand=scr.set)
 scr.configure(command=list1.yview)
-
-b1=Button(window,text="View all",width=12,command=viewcommand)
-b1.grid(row=4,column=3)
+  1 = Button(
+    window,
+    text="🔍 View All Records",
+    width=18,
+    bg="#0078D7",        # Modern blue color
+    fg="white",          # White text
+    activebackground="#005A9E",  # Darker blue when clicked
+    activeforeground="white",
+    relief="raised",     # Gives a 3D effect
+    bd=3,                # Slight border thickness
+    font=("Helvetica", 10, "bold"),
+    command=viewcommand
+)
+b1.grid(row=4, column=3, pady=5)      
+  
 
 b2=Button(window,text="Search entry",width=12,command=searchcommand)
 b2.grid(row=5,column=3)
